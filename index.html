@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip the Narrative</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Flip the Narrative</div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h1>Welcome to Flip the Narrative</h1>
+        <p>Explore my latest project: a digital magazine inspired by flipping perspectives.</p>
+        
+        <div class="flipbook">
+            <!-- Page Group 1 -->
+            <div class="page-group" id="group1">
+                <div class="page" id="page1">
+                    <img src="images/cover copy.jpg" alt="Page 1">
+                </div>
+            </div>
+
+            <!-- Page Group 2 -->
+            <div class="page-group" id="group2">
+                <div class="page" id="page2">
+                    <img src="images/LPPP.jpg" alt="Page 2">
+                </div>
+                <div class="page" id="page3">
+                    <img src="images/LPPP2pg.jpg" alt="Page 3">
+                </div>
+            </div>
+
+            <!-- Page Group 3 -->
+            <div class="page-group" id="group3">
+                <div class="page" id="page4">
+                    <img src="images/ABLMP.jpg" alt="Page 4">
+                </div>
+                <div class="page" id="page5">
+                    <img src="images/ABLMPpage2.jpg" alt="Page 5">
+                </div>
+            </div>
+
+            <!-- Page Group 4 -->
+            <div class="page-group" id="group4">
+                <div class="page" id="page6">
+                    <img src="images/rainbowFishpg2.jpg" alt="Page 6">
+                </div>
+                <div class="page" id="page7">
+                    <img src="images/rainbowFish copy.jpg" alt="Page 7">
+                </div>
+            </div>
+
+            <!-- Arrows -->
+            <div class="arrows">
+                <span class="left-arrow" onclick="changePage(-1)">&#8592;</span>
+                <span class="right-arrow" onclick="changePage(1)">&#8594;</span>
+            </div>
+        </div>        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
