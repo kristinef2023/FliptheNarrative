@@ -1,21 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let currentPage = 0; // Index of the current page
-    const pages = document.querySelectorAll(".page");
+let currentGroup = 1; // Start with the first group
 
-    // Initially hide all pages except the first one
-    pages.forEach((page, index) => {
-        if (index !== 0) page.style.display = "none";
-    });
+// Function to change pages
+function changePage(direction) {
+    // Hide the current page group
+    document.getElementById(`group${currentGroup}`).style.display = 'none';
+    
+    // Update the current group based on the direction
+    currentGroup += direction;
 
-    // Function to change pages
-    window.changePage = function (direction) {
-        // Hide the current page
-        pages[currentPage].style.display = "none";
+    // If we go past the last group, loop back to the first group
+    if (currentGroup > 4) {
+        currentGroup = 1;
+    } else if (currentGroup < 1) {
+        currentGroup = 4;
+    }
 
-        // Update the page index with circular navigation
-        currentPage = (currentPage + direction + pages.length) % pages.length;
+    // Show the new page group
+    document.getElementById(`group${currentGroup}`).style.display = 'block';
+}
 
-        // Show the new page
-        pages[currentPage].style.display = "block";
-    };
+// Initialize the first group as visible
+document.addEventListener("DOMContentLoaded", () => {
+    // Hide all groups initially
+    const groups = document.querySelectorAll('.page-group');
+    groups.forEach(group => group.style.display = 'none');
+
+    // Show the first group
+    document.getElementById('group1').style.display = 'block';
 });
